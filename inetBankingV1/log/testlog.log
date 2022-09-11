@@ -361,3 +361,75 @@
 2022-09-09 16:13:18,634 - ebanking -INFO - user name provided
 2022-09-09 16:13:18,715 - ebanking -INFO - password provided
 2022-09-09 16:13:23,640 - ebanking -WARN - Login failed
+2022-09-11 12:20:20,474 - ebanking -INFO - URL is opened
+2022-09-11 12:20:21,003 - ebanking -INFO - entered username
+2022-09-11 12:20:21,153 - ebanking -INFO - entered password
+2022-09-11 12:20:27,109 - ebanking -INFO - Login test passed
+2022-09-11 12:28:45,198 - ebanking -INFO - Login started
+2022-09-11 12:29:03,199 - ebanking -INFO - Enter customer details
+2022-09-11 12:29:03,272 - ebanking -INFO - Login started
+2022-09-11 12:29:13,327 - ebanking -INFO - Login started
+2022-09-11 12:29:23,390 - ebanking -INFO - Login started
+2022-09-11 12:38:00,350 - ebanking -INFO - Login started
+2022-09-11 12:38:14,566 - ebanking -INFO - Enter customer details
+2022-09-11 12:38:14,604 - ebanking -INFO - Login started
+2022-09-11 12:38:28,418 - ebanking -INFO - Login started
+2022-09-11 12:38:38,868 - ebanking -INFO - Login started
+2022-09-11 12:38:48,988 - ebanking -INFO - Login started
+2022-09-11 12:38:59,025 - ebanking -INFO - Login started
+2022-09-11 12:39:09,057 - ebanking -INFO - Login started
+2022-09-11 12:39:09,548 - ebanking -INFO - Login started
+2022-09-11 12:39:09,648 - ebanking -INFO - Login started
+2022-09-11 12:39:09,722 - ebanking -INFO - Login started
+2022-09-11 12:39:09,768 - ebanking -INFO - Login started
+2022-09-11 12:39:09,815 - ebanking -INFO - Login started
+2022-09-11 12:42:29,924 - ebanking -INFO - Login started
+2022-09-11 12:42:36,751 - ebanking -INFO - Enter customer details
+2022-09-11 12:42:36,791 - ebanking -INFO - Login started
+2022-09-11 13:20:42,908 - ebanking -INFO - Login started
+2022-09-11 13:20:52,760 - ebanking -INFO - Enter customer details
+2022-09-11 13:21:04,212 - ebanking -INFO - validation started....
+2022-09-11 13:21:04,257 - ebanking -ERROR - Something went wrong!!!!
+2022-09-11 13:21:04,335 - ebanking -INFO - Login started
+2022-09-11 13:21:15,547 - ebanking -INFO - Login started
+2022-09-11 13:21:25,592 - ebanking -INFO - Login started
+2022-09-11 13:21:32,108 - ebanking -INFO - Login started
+2022-09-11 13:21:32,156 - ebanking -INFO - Login started
+2022-09-11 13:21:32,228 - ebanking -INFO - Login started
+2022-09-11 13:21:32,293 - ebanking -INFO - Login started
+2022-09-11 13:21:32,321 - ebanking -INFO - Login started
+2022-09-11 13:21:32,377 - ebanking -INFO - Login started
+2022-09-11 13:21:32,455 - ebanking -INFO - Login started
+2022-09-11 13:21:32,489 - ebanking -INFO - Login started
+2022-09-11 13:25:22,404 - ebanking -INFO - Login started
+2022-09-11 13:25:28,735 - ebanking -INFO - Enter customer details
+2022-09-11 13:25:40,118 - ebanking -INFO - validation started....
+2022-09-11 13:25:40,160 - ebanking -ERROR - Something went wrong!!!!
+2022-09-11 13:25:40,248 - ebanking -INFO - Login started
+2022-09-11 13:25:51,680 - ebanking -INFO - Login started
+2022-09-11 13:26:01,736 - ebanking -INFO - Login started
+2022-09-11 13:26:11,767 - ebanking -INFO - Login started
+2022-09-11 13:27:23,213 - ebanking -INFO - Login started
+2022-09-11 13:27:32,718 - ebanking -INFO - Enter customer details
+2022-09-11 13:27:46,685 - ebanking -INFO - validation started....
+2022-09-11 13:27:46,708 - ebanking -INFO - test case passed....
+2022-09-11 13:27:51,740 - ebanking -INFO - Login started
+2022-09-11 13:28:01,772 - ebanking -INFO - Login started
+2022-09-11 14:43:26,168 - ebanking -INFO - Login started
+2022-09-11 14:43:31,795 - ebanking -INFO - Enter customer details
+2022-09-11 14:43:44,836 - ebanking -INFO - validation started....
+2022-09-11 14:43:44,869 - ebanking -ERROR - Something went wrong!!!!
+2022-09-11 14:43:44,928 - ebanking -INFO - Login started
+2022-09-11 14:43:55,964 - ebanking -INFO - Login started
+2022-09-11 14:44:34,806 - ebanking -INFO - user name provided
+2022-09-11 14:44:34,971 - ebanking -INFO - password provided
+2022-09-11 14:44:39,971 - ebanking -INFO - Login passed
+2022-09-11 14:44:45,388 - ebanking -INFO - user name provided
+2022-09-11 14:44:45,776 - ebanking -INFO - password provided
+2022-09-11 14:44:51,338 - ebanking -WARN - Login failed
+2022-09-11 14:44:51,461 - ebanking -INFO - user name provided
+2022-09-11 14:44:51,710 - ebanking -INFO - password provided
+2022-09-11 14:44:56,552 - ebanking -WARN - Login failed
+2022-09-11 14:44:56,909 - ebanking -INFO - user name provided
+2022-09-11 14:44:57,009 - ebanking -INFO - password provided
+2022-09-11 14:45:02,116 - ebanking -WARN - Login failed

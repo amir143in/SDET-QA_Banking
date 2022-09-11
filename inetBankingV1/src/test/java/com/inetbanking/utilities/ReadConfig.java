@@ -47,4 +47,9 @@ public class ReadConfig {
 		String firefoxpath = pro.getProperty("firefoxpath");
 		return firefoxpath;
 	}
+	public String getLoginDataPath() {
+		String loginDataPath = pro.getProperty("loginPath");
+		return loginDataPath;
+	}
+	
 }

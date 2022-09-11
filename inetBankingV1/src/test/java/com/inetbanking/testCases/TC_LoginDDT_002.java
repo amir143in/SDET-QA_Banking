@@ -33,8 +33,8 @@ public class TC_LoginDDT_002 extends BaseClass {
 			logger.info("Login passed");
 			lp.clickLogout();
 			Thread.sleep(3000);
-			//driver.switchTo().alert().accept();// close logout alert
-			//driver.switchTo().defaultContent();
+			driver.switchTo().alert().accept();// close logout alert
+			driver.switchTo().defaultContent();
 
 		}
 
@@ -54,7 +54,7 @@ public class TC_LoginDDT_002 extends BaseClass {
 	@DataProvider(name = "LoginData")
 	String[][] getData() throws IOException {
 		//String path = System.getProperty("user.dir") + "/src/test/java/com/inetbanking/testData/LoginData.xlsx";
-		String path = "C:/Users/AAnsari/eclipse-workspace2022/inetBankingV1/src/test/java/com/inetbanking/testData/LoginData.xlsx";
+		String path = "C:/Users/AAnsari/git/inetBankingV1/src/test/java/com/inetbanking/testData/LoginData.xlsx";
 		int rownum = XLUtils.getRowCount(path, "Sheet1");
 		int colcount = XLUtils.getCellCount(path, "Sheet1", 1);
 

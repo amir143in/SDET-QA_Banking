@@ -17,6 +17,7 @@ public class AddCustomerPage {
 		PageFactory.initElements(rdriver, this);
 	}
 
+	
 	@FindBy(how = How.XPATH, using = "//a[contains(text(),'New Customer')]")
 	@CacheLookup
 	WebElement lnkAddNewCustomer;
@@ -25,10 +26,14 @@ public class AddCustomerPage {
 	@CacheLookup
 	WebElement txtCustomerName;
 
-	@FindBy(how = How.NAME, using = "rad1")
+	@FindBy(how = How.XPATH, using = "//input[@value='m']")
 	@CacheLookup
-	WebElement rdGender;
-
+	WebElement maleGender;
+	
+	@FindBy(how = How.XPATH, using = "//input[@value='f']")
+	@CacheLookup
+	WebElement femaleGender;
+	
 	@FindBy(how = How.ID_OR_NAME, using = "dob")
 	@CacheLookup
 	WebElement txtdob;
@@ -76,14 +81,35 @@ public class AddCustomerPage {
 
 	}
 
-	public void custgender(String cgender) {
-		rdGender.click();
+	public void custgenderMale(String mgender) {
+		maleGender.click();
 	}
-
-	public void custdob(String dd, String mm, String yyyy) {
+	
+	public void custgenderfemale(String fgender) {
+		femaleGender.click();
+	}
+	
+	public void gender(String gender) {
+		try {
+			if(gender.equalsIgnoreCase("male")) {
+				maleGender.click();
+			} else if(gender.equalsIgnoreCase("female")){
+				femaleGender.click();
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("Gender is incorrect");
+		}
+	}
+	
+	public void custdob1(String dd, String mm, String yyyy) {
 		txtdob.sendKeys(dd);
 		txtdob.sendKeys(mm);
 		txtdob.sendKeys(yyyy);
+	}
+
+	public void custdob(String ddmmyyyy) {
+		txtdob.sendKeys(ddmmyyyy);
 
 	}
 
