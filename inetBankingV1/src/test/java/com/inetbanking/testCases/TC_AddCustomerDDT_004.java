@@ -14,6 +14,7 @@ public class TC_AddCustomerDDT_004 extends BaseClass {
 	public static LoginPage lp;
 	public static AddCustomerPage addCust;
 
+	//Will check the issues
 	@Test(dataProvider = "AddCustomerData")
 	public void addNewCustomerDDT(String CustLoginUname, String CustLoginPwd, String custName, String custGender,
 			String CustDOB, String CustAddress, String CustCity, String CustState, String CustPin, String CustTelephone,
