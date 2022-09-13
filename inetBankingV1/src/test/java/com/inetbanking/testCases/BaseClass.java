@@ -16,7 +16,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
 import com.inetbanking.utilities.ReadConfig;
@@ -33,7 +35,7 @@ public class BaseClass {
 	public static Logger logger;
 
 	@Parameters("browser")
-	@BeforeClass
+	@BeforeMethod
 	public void setup(String br) {
 
 		logger = Logger.getLogger("ebanking");
@@ -42,28 +44,28 @@ public class BaseClass {
 		if (br.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", readconfig.getChromePath());
 			driver = new ChromeDriver();
-			
-		} else if(br.equals("firefox")) {
-			//System.setProperty("webdriver.gecko.driver", readconfig.getFireFoxPath());
+
+		} else if (br.equals("firefox")) {
+			// System.setProperty("webdriver.gecko.driver", readconfig.getFireFoxPath());
 			driver = new FirefoxDriver();
-			
-		} else if(br.equals("ie")) {
+
+		} else if (br.equals("ie")) {
 			System.setProperty("webdriver.ie.driver", readconfig.getIEPath());
 			driver = new InternetExplorerDriver();
-			
+
 		}
-	//	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		// driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get(baseURL);
 		driver.manage().window().maximize();
 	}
 
-	@AfterClass
+	@AfterMethod
 	public void tearDown() {
 		driver.quit();
 	}
 
-	//method to take the screen shot of the FAILED test cases
+	// method to take the screen shot of the FAILED test cases
 	public void captureScreen(WebDriver driver, String tname) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
@@ -71,7 +73,7 @@ public class BaseClass {
 		FileUtils.copyFile(source, target);
 		System.out.println("Screenshot taken");
 	}
-	
+
 	public static String randomestring() {
 		String generatedstring = RandomStringUtils.randomAlphabetic(8);
 		return (generatedstring);
@@ -80,7 +82,6 @@ public class BaseClass {
 	public static String randomeNum() {
 		String generatedstring2 = RandomStringUtils.randomNumeric(4);
 		return (generatedstring2);
-	}	
-	
-	
+	}
+
 }
