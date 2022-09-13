@@ -29,7 +29,7 @@ public class TC_AddCustomerDDT_004 extends BaseClass {
 		Thread.sleep(3000);
 		logger.info("Enter customer details");
 
-		try {
+	
 			addCust = new AddCustomerPage(driver);
 			addCust.clickAddNewCustomer();
 			addCust.custName(custName);
@@ -58,10 +58,7 @@ public class TC_AddCustomerDDT_004 extends BaseClass {
 				Assert.assertTrue(false);
 			}
 			Thread.sleep(5000);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			logger.error("Something went wrong!!!!");
-		}
+		
 
 	}
 
@@ -69,12 +66,13 @@ public class TC_AddCustomerDDT_004 extends BaseClass {
 	String[][] getData() throws IOException {
 		// String path = System.getProperty("user.dir") +
 		// "/src/test/java/com/inetbanking/testData/LoginData.xlsx";
-		String path = "C:/Users/AAnsari/git/inetBankingV1/src/test/java/com/inetbanking/testData/LoginData.xlsx";
-		 // String path = logindataPath;
+		//String path = "C:/Users/AAnsari/git/inetBankingV1/src/test/java/com/inetbanking/testData/LoginData.xlsx";
+		 String path = logindataPath;
 		int rownum = XLUtils.getRowCount(path, "Sheet2");
 		int colcount = XLUtils.getCellCount(path, "Sheet2", 1);
 
 		String logindata[][] = new String[rownum][colcount];
+		System.out.println(logindata);
 
 		for (int i = 1; i <= rownum; i++) {
 			for (int j = 0; j < colcount; j++) {
