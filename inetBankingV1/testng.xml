@@ -5,12 +5,10 @@
 		<listener class-name="com.inetbanking.utilities.Reporting" />
 	</listeners>
 	
-	<test name="BankingApp Test">
+	<test name="BankingApp Test1">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			
 			<class name="com.inetbanking.testCases.TC_LoginDDT_002" />
-			
 		</classes>
 	</test>
 	<!-- Test -->

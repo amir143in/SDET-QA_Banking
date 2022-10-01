@@ -22,7 +22,6 @@ public class TC_LoginDDT_002 extends BaseClass {
 		lp.clickSubmit();
 
 		Thread.sleep(3000);
-
 		if (isAlertPresent() == true) {
 			driver.switchTo().alert().accept();// close alert
 			driver.switchTo().defaultContent();
@@ -50,11 +49,11 @@ public class TC_LoginDDT_002 extends BaseClass {
 		}
 
 	}
-
+	
 	@DataProvider(name = "LoginData")
 	String[][] getData() throws IOException {
-		//String path = System.getProperty("user.dir") + "/src/test/java/com/inetbanking/testData/LoginData.xlsx";
-		String path = "C:/Users/AAnsari/git/inetBankingV1/src/test/java/com/inetbanking/testData/LoginData.xlsx";
+		String path = System.getProperty("user.dir") + "/src/test/java/com/inetbanking/testData/LoginData.xlsx";
+		//String path = "C:/Users/AAnsari/git/inetBankingV1/src/test/java/com/inetbanking/testData/LoginData.xlsx";
 		int rownum = XLUtils.getRowCount(path, "Sheet1");
 		System.out.println("The number of rows count : " + rownum);
 		int colcount = XLUtils.getCellCount(path, "Sheet1", 1);

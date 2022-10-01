@@ -15,13 +15,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
+import org.testng.asserts.Assertion;
 
+import com.inetbanking.pageObjects.LoginPage;
 import com.inetbanking.utilities.ReadConfig;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 
@@ -42,11 +48,13 @@ public class BaseClass {
 		PropertyConfigurator.configure("log4j.properties");
 
 		if (br.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", readconfig.getChromePath());
+			//System.setProperty("webdriver.chrome.driver", readconfig.getChromePath());
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 
 		} else if (br.equals("firefox")) {
 			// System.setProperty("webdriver.gecko.driver", readconfig.getFireFoxPath());
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 
 		} else if (br.equals("ie")) {
@@ -82,6 +90,26 @@ public class BaseClass {
 	public static String randomeNum() {
 		String generatedstring2 = RandomStringUtils.randomNumeric(4);
 		return (generatedstring2);
+	}
+	
+	public static void loginGeneric(String uLoginUser, String uLoginPassword) {
+		LoginPage lp = new LoginPage(driver);
+		lp.setUserName(uLoginUser);
+		logger.info("user name provided");
+		lp.setPassword(uLoginPassword);
+		logger.info("password provided");
+		lp.clickSubmit();
+		
+		
+	}
+	
+	public static void logoutGeneric() {
+		LoginPage lp = new LoginPage(driver);
+		lp.clickLogout();
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.alertIsPresent());
+		driver.switchTo().alert().accept();
 	}
 
 }
