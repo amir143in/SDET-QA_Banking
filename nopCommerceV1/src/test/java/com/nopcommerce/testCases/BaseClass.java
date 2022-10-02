@@ -19,7 +19,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
-import org.testng.asserts.Assertion;
 
 import com.nopcommerce.pageObjects.LoginPage;
 import com.nopcommerce.utilities.ReadConfig;
